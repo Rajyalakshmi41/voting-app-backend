@@ -1,0 +1,45 @@
+voting application
+
+A functionality where user can vote his fav. candidate among set of candidates
+
+
+voting app functionality
+
+1.user sign in/ sign up
+2. see the list of candidate
+3. give vote, after voting user can't vote again
+4. there is a route which shows the list of candidates and their live vote
+5. user data must contain their own unique government id proof: adhaar card number
+6. there should be one admin who can only maintain the table of candidtes and he can't vote
+7. user can change their password
+8. user can login only with adhaar card number and password
+
+
+----------------------------------------------------------------
+
+
+Routes
+
+user Authentication :
+
+    /signup: POST - create a new user account
+    /login: POST-log in to an existing account (adhaar card no+password)
+
+voting:
+    /candidates: get the list of candidates
+    /vote/:candidateId: POST - vote for a specific candidate
+
+vote counts:
+    /vote/counts: Get the list of candidates sorted by their vote 
+
+user profile:
+    /profile: GET- get the user's profile information
+    /profile/password: PUT - change the user's password
+
+
+Admin candidate management:
+/candidates: POST- create a new candidate
+/candidates/:candidateId: PUT - update an existing candidate
+/candidate/:candidateId: DELETE - Delete a candidate from the list
+
+
